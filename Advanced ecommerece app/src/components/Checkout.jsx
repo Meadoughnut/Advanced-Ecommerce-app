@@ -9,6 +9,7 @@ const Checkout = () => {
 
   const [cartItems, setCartItems] = useState([]);
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [loading, setLoading] = useState(false); // New state for loading spinner
   const [errors, setErrors] = useState({}); // Error state for form validation
 
   useEffect(() => {
@@ -33,19 +34,35 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Validate the form before submitting
     if (!validateForm()) {
       return;
     }
 
-    // Simulate checkout process
-    console.log('Order details:', formData);
+    // Simulate a loading spinner
+    setLoading(true);
 
-    // Clear cart and show order placed message
-    localStorage.removeItem('cartItems');
-    setOrderPlaced(true);
+    // Simulate a delay for order processing
+    setTimeout(() => {
+      // Simulate checkout process
+      console.log('Order details:', formData);
+
+      // Clear cart and show order placed message
+      localStorage.removeItem('cartItems');
+      setOrderPlaced(true);
+      setLoading(false); // Turn off loading spinner
+    }, 2000); // 2-second delay to simulate order processing
   };
+
+  if (loading) {
+    return (
+      <div className="loading-spinner">
+        <p>Processing your order...</p>
+        {/* You can add a CSS animation for the spinner here */}
+      </div>
+    );
+  }
 
   if (orderPlaced) {
     return (
