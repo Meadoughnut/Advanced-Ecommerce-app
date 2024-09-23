@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import productsData from '../mock-data/products.json';
-import './ProductList.css'; // Import the CSS file
+// Import the CSS file
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);

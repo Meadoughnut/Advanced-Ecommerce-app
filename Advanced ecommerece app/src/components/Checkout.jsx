@@ -9,6 +9,7 @@ const Checkout = () => {
 
   const [cartItems, setCartItems] = useState([]);
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [errors, setErrors] = useState({}); // Error state for form validation
 
   useEffect(() => {
     // Load cart items from localStorage
@@ -16,12 +17,28 @@ const Checkout = () => {
     setCartItems(storedCart);
   }, []);
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.address) newErrors.address = 'Address is required';
+    if (!formData.payment) newErrors.payment = 'Payment details are required';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validate the form before submitting
+    if (!validateForm()) {
+      return;
+    }
+
     // Simulate checkout process
     console.log('Order details:', formData);
 
@@ -67,6 +84,7 @@ const Checkout = () => {
             onChange={handleChange}
             required
           />
+          {errors.name && <p className="error">{errors.name}</p>}
         </div>
         <div>
           <label>Address</label>
@@ -77,6 +95,7 @@ const Checkout = () => {
             onChange={handleChange}
             required
           />
+          {errors.address && <p className="error">{errors.address}</p>}
         </div>
         <div>
           <label>Payment Details</label>
@@ -87,6 +106,7 @@ const Checkout = () => {
             onChange={handleChange}
             required
           />
+          {errors.payment && <p className="error">{errors.payment}</p>}
         </div>
         <button type="submit">Place Order</button>
       </form>
