@@ -1,7 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]); // Replace with actual cart state later
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    // Retrieve cart items from localStorage
+    const storedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    setCartItems(storedCart);
+  }, []);
+
+  const handleRemove = (id) => {
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    setCartItems(updatedCart);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); // Update localStorage
+  };
 
   if (cartItems.length === 0) {
     return <div>Your cart is empty!</div>;
@@ -17,6 +29,7 @@ const Cart = () => {
             <h2>{item.name}</h2>
             <p>Price: ${item.price.toFixed(2)}</p>
             <p>Quantity: {item.quantity}</p>
+            <button onClick={() => handleRemove(item.id)}>Remove</button>
           </div>
         </div>
       ))}

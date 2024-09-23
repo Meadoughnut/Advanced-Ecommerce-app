@@ -3,14 +3,25 @@ import { useParams } from 'react-router-dom';
 import productsData from '../mock-data/products.json';
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Get the product ID from the URL
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    // Find the product based on the ID
     const selectedProduct = productsData.find((item) => item.id === parseInt(id));
     setProduct(selectedProduct);
+    
+    // Retrieve cart items from localStorage when the component mounts
+    const storedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    setCartItems(storedCart);
   }, [id]);
+
+  const addToCart = () => {
+    const updatedCart = [...cartItems, { ...product, quantity: 1 }]; // Add product to cart with quantity
+    setCartItems(updatedCart);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); // Store updated cart in localStorage
+    alert(`${product.name} added to cart!`);
+  };
 
   if (!product) {
     return <div>Product not found!</div>;
@@ -22,7 +33,7 @@ const ProductDetails = () => {
       <h1>{product.name}</h1>
       <p>${product.price.toFixed(2)}</p>
       <p>{product.description}</p>
-      <button>Add to Cart</button>
+      <button onClick={addToCart}>Add to Cart</button>
     </div>
   );
 };
