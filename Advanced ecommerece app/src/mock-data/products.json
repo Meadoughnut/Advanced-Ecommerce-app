@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "name": "Cool Sneakers",
+      "price": 49.99,
+      "image": "https://example.com/sneakers.jpg",
+      "category": "Shoes",
+      "description": "Comfortable and stylish sneakers for everyday wear."
+    },
+    {
+      "id": 2,
+      "name": "Leather Jacket",
+      "price": 149.99,
+      "image": "https://example.com/jacket.jpg",
+      "category": "Jackets",
+      "description": "A durable leather jacket that never goes out of style."
+    }
+  ]
+  
