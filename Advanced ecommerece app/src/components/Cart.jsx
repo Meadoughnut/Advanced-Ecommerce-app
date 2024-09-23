@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     // Retrieve cart items from localStorage
@@ -12,7 +14,7 @@ const Cart = () => {
   const handleRemove = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); // Update localStorage
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
   };
 
   const handleQuantityChange = (id, increment) => {
@@ -26,7 +28,12 @@ const Cart = () => {
       return item;
     });
     setCartItems(updatedCart);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); // Update localStorage
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+  };
+
+  const proceedToCheckout = () => {
+    // Navigate to the Checkout page
+    navigate('/checkout');
   };
 
   if (cartItems.length === 0) {
@@ -54,9 +61,10 @@ const Cart = () => {
         </div>
       ))}
       <p><strong>Total: ${totalPrice.toFixed(2)}</strong></p>
-      <button>Proceed to Checkout</button>
+      <button onClick={proceedToCheckout} className="proceed-checkout">Proceed to Checkout</button>
     </div>
   );
 };
 
 export default Cart;
+
