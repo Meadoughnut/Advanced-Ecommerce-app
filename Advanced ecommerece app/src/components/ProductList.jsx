@@ -13,14 +13,19 @@ const ProductList = () => {
 
   return (
     <div className="product-grid">
-      {products.map((product) => (
-        <div className="product-card" key={product.id}>
-          <img src={product.image} alt={product.name} className="product-image" />
-          <h3>{product.name}</h3>
-          <p>${product.price.toFixed(2)}</p>
-          <Link to={`/product/${product.id}`}>View Details</Link>
-        </div>
-      ))}
+      {products.map((product) => {
+        // Dynamically load the image using require
+        const imagePath = require(`../assets/images/${product.image}`).default;
+
+        return (
+          <div className="product-card" key={product.id}>
+            <img src={imagePath} alt={product.name} className="product-image" />
+            <h3>{product.name}</h3>
+            <p>${product.price.toFixed(2)}</p>
+            <Link to={`/product/${product.id}`}>View Details</Link>
+          </div>
+        );
+      })}
     </div>
   );
 };

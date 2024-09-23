@@ -27,7 +27,7 @@
       "id": 4,
       "name": "Gold Platted watch - for woman",
       "price": 99.99,
-      "image": "Gold Plated Woman Watch",
+      "image": "Gold Plated Woman Watch.png",
       "category": "Clothings",
       "description": "The Elegant Gold-Plated Women's Watch is a timeless accessory that exudes sophistication and luxury. Crafted with a stunning gold-plated finish, this watch is designed for the modern woman who appreciates both style and precision. The gleaming gold plating enhances the watch's elegance, making it perfect for both formal events and everyday wear. Its minimalist dial and slim profile add a touch of refinement, while the premium craftsmanship ensures durability and comfort. A true symbol of elegance, this watch is more than just a timepiece—it's a statement of grace and class."
     },
@@ -56,10 +56,10 @@
       "description": "Wrap yourself in warmth and style with this Cozy and Stylish Winter Scarf. Made from soft, premium materials, this scarf provides maximum comfort and insulation against the cold. The versatile design makes it perfect for both casual and formal wear, adding a touch of elegance to any winter outfit. Whether you're braving the chilly outdoors or adding a layer of style to your wardrobe, this scarf offers both function and fashion, keeping you warm while looking effortlessly chic."
     },
     {
-      "id": 2,
+      "id": 8,
       "name": "Jacket",
       "price": 44.99,
-      "image": "Woman Jacket",
+      "image": "Woman Jacket.png",
       "category": "Clothings",
       "description": "Stay stylish and warm with this Sleek and Fitted Women's Jacket, designed to provide a flattering, figure-hugging fit. Crafted from high-quality materials, this jacket offers both warmth and flexibility, making it perfect for cooler days and active lifestyles. The modern, minimalist design features a zip-up front and contoured seams that enhance your silhouette. Whether you're layering it over casual wear or pairing it with your favorite outfit, this jacket adds a touch of sophistication and comfort to your wardrobe. "
     }
