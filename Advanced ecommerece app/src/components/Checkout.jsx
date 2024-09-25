@@ -100,6 +100,7 @@ const Checkout = () => {
             value={formData.name}
             onChange={handleChange}
             required
+            autoComplete="name" // Added autocomplete attribute
           />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
@@ -111,6 +112,7 @@ const Checkout = () => {
             value={formData.address}
             onChange={handleChange}
             required
+            autoComplete="street-address" // Added autocomplete attribute
           />
           {errors.address && <p className="error">{errors.address}</p>}
         </div>
@@ -122,6 +124,7 @@ const Checkout = () => {
             value={formData.payment}
             onChange={handleChange}
             required
+            autoComplete="cc-number" // Added autocomplete attribute
           />
           {errors.payment && <p className="error">{errors.payment}</p>}
         </div>

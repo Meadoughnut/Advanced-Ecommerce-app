@@ -4,17 +4,21 @@ const SignUp = () => {
   const [user, setUser] = useState({ name: '', email: '', password: '' });
   const [message, setMessage] = useState('');
 
+  // Handle input changes and update the user state
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
+  // Handle sign-up form submission
   const handleSignUp = (e) => {
     e.preventDefault();
     const existingUser = localStorage.getItem(user.email);
 
+    // Check if the user already exists
     if (existingUser) {
       setMessage('User already exists. Please sign in.');
     } else {
+      // Save new user data to localStorage
       localStorage.setItem(user.email, JSON.stringify(user));
       setMessage('Sign up successful! Please sign in.');
     }
@@ -50,6 +54,7 @@ const SignUp = () => {
         />
         <button type="submit">Sign Up</button>
       </form>
+      {/* Display success or error message */}
       <p>{message}</p>
     </div>
   );

@@ -2,121 +2,92 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
-  const [coupon, setCoupon] = useState('');
-  const [discount, setDiscount] = useState(0);
-  const [shippingFee, setShippingFee] = useState(5); // Default shipping fee
+  const [cartItems, setCartItems] = useState([]); // State to store cart items
   const navigate = useNavigate(); // Initialize useNavigate
 
-  // Assuming you store the current user's email in localStorage when they log in
-  const userEmail = localStorage.getItem('currentUser'); 
-
+  // Fetch cart items from localStorage when the component mounts
   useEffect(() => {
-    // Retrieve cart items from localStorage based on the user's email
-    try {
-      const storedCart = JSON.parse(localStorage.getItem(`cartItems-${userEmail}`)) || [];
-      setCartItems(storedCart);
-    } catch (error) {
-      console.error("Error parsing cart items from localStorage", error);
-    }
-  }, [userEmail]);
+    console.log('Retrieving cart items from localStorage...');
+    const storedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    console.log('Stored cart items:', storedCart);
+    setCartItems(storedCart);
+  }, []);
 
-  // Update localStorage whenever the cart changes
-  useEffect(() => {
-    localStorage.setItem(`cartItems-${userEmail}`, JSON.stringify(cartItems));
-  }, [cartItems, userEmail]);
-
+  // Function to handle removing an item from the cart
   const handleRemove = (id) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    console.log('Cart after removal:', updatedCart);
   };
 
+  // Function to handle changing the quantity of a cart item
   const handleQuantityChange = (id, increment) => {
     const updatedCart = cartItems.map((item) => {
       if (item.id === id) {
         return {
           ...item,
-          quantity: item.quantity + increment > 0 ? item.quantity + increment : 1
+          quantity: item.quantity + increment > 0 ? item.quantity + increment : 1,
         };
       }
       return item;
     });
     setCartItems(updatedCart);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    console.log('Cart after quantity change:', updatedCart);
   };
 
-  const handleSaveForLater = (id) => {
-    const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
-    const itemToSave = cartItems.find((item) => item.id === id);
-    const updatedCart = cartItems.filter((item) => item.id !== id);
-
-    setCartItems(updatedCart);
-    localStorage.setItem(`cartItems-${userEmail}`, JSON.stringify(updatedCart));
-    localStorage.setItem('savedItems', JSON.stringify([...savedItems, itemToSave]));
-  };
-
-  const applyCoupon = () => {
-    const validCoupons = { 'SAVE10': 10, 'DISCOUNT15': 15 };
-
-    if (validCoupons[coupon]) {
-      setDiscount(validCoupons[coupon]);
-      alert(`Coupon applied! You saved $${validCoupons[coupon]}`);
-    } else {
-      alert("Invalid Coupon Code");
-    }
-  };
-
+  // Function to handle proceeding to the checkout page
   const proceedToCheckout = () => {
-    // Navigate to the Checkout page
     navigate('/checkout');
+    console.log('Proceeding to checkout...');
   };
 
+  // If the cart is empty, display a message
   if (cartItems.length === 0) {
+    console.log('Cart is empty');
     return <div>Your cart is empty!</div>;
   }
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const finalTotal = totalPrice - discount + (totalPrice > 50 ? 0 : shippingFee); // Free shipping on orders above $50
+  // Calculate the total price of all items in the cart
+  const totalPrice = cartItems.reduce((acc, item) => {
+    if (item && item.price && item.quantity) {
+      return acc + item.price * item.quantity;
+    } else {
+      console.warn('Invalid item in cart:', item); // Warn if there's an issue with an item
+      return acc;
+    }
+  }, 0);
+
+  console.log('Total Price:', totalPrice);
 
   return (
     <div className="cart">
       <h1>Your Cart</h1>
+      {cartItems.map((item) => {
+        // Check if the item is valid before rendering
+        if (!item || !item.name || !item.price) {
+          console.error('Item is invalid or missing properties:', item);
+          return null; // Skip rendering if the item is invalid
+        }
 
-      {cartItems.map((item) => (
-        <div key={item.id} className="cart-item">
-          <img src={item.image} alt={item.name} className="cart-item-image" />
-          <div>
-            <h2>{item.name}</h2>
-            <p>Price: ${item.price.toFixed(2)}</p>
-            <p>
-              Quantity: {item.quantity}{' '}
-              <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>{' '}
-              <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
-            </p>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
-            <button onClick={() => handleSaveForLater(item.id)}>Save for Later</button>
+        return (
+          <div key={item.id} className="cart-item">
+            <div>
+              <h2>{item.name}</h2>
+              <p>Price: ${item.price.toFixed(2)}</p>
+              <p>
+                Quantity: {item.quantity}{' '}
+                <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>{' '}
+                <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
+              </p>
+              <button onClick={() => handleRemove(item.id)}>Remove</button>
+            </div>
           </div>
-        </div>
-      ))}
-
-      <div className="cart-summary">
-        <h3>Cart Summary</h3>
-        <p><strong>Total Price: ${totalPrice.toFixed(2)}</strong></p>
-        <p>Discount: ${discount}</p>
-        <p>Shipping Fee: ${totalPrice > 50 ? 'Free' : `$${shippingFee}`}</p>
-        <p><strong>Final Total: ${finalTotal.toFixed(2)}</strong></p>
-
-        <div className="coupon-section">
-          <input
-            type="text"
-            placeholder="Enter Coupon Code"
-            value={coupon}
-            onChange={(e) => setCoupon(e.target.value)}
-          />
-          <button onClick={applyCoupon}>Apply Coupon</button>
-        </div>
-
-        <button onClick={proceedToCheckout} className="proceed-checkout">Proceed to Checkout</button>
-      </div>
+        );
+      })}
+      <p><strong>Total: ${totalPrice.toFixed(2)}</strong></p>
+      <button onClick={proceedToCheckout} className="proceed-checkout">Proceed to Checkout</button>
     </div>
   );
 };

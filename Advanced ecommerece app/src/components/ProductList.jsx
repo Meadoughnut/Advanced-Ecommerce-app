@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import productsData from '../mock-data/products.json';
-// Import the CSS file
+// Import the CSS file if necessary
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -14,8 +14,8 @@ const ProductList = () => {
   return (
     <div className="product-grid">
       {products.map((product) => {
-        // Dynamically load the image using require
-        const imagePath = require(`../assets/images/${product.image}`).default;
+        // Ensure the image path is correct and images are stored in public/assets/images
+        const imagePath = `/assets/images/${product.image}`; // Correct path based on public folder
 
         return (
           <div className="product-card" key={product.id}>

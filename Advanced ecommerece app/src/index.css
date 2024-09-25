@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--background-color);
+ background-color: #8e00b5;
   color: var(--text-color);
   position: fixed;
   width: 100%;
@@ -51,6 +51,9 @@
 
 .navbar .nav-links li a:hover {
   color: var(--primary-color); /* Brighter hover effect */
+}
+.signin-container{
+  margin:150px;
 }
 
 /* Media Query for Tablets */
