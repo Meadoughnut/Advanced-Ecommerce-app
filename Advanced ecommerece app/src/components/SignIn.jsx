@@ -1,34 +1,39 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const SignIn = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
+const SignIn = ({ setLoggedIn }) => {
+  const [formData, setFormData] = useState({ email: '', password: '' });
   const [message, setMessage] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  // Handle input changes for email and password
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
-  // Handle sign-in form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Retrieve user data from localStorage
-    const storedUser = JSON.parse(localStorage.getItem(formData.email));
 
-    // Check if the user exists and password matches
-    if (storedUser && storedUser.password === formData.password) {
-      setMessage('Sign in successful!');
-      // Perform any sign-in success logic, such as redirecting to another page
+    // Get the user data from localStorage
+    const storedUser = localStorage.getItem(formData.email);
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      
+      // Check if the password matches
+      if (parsedUser.password === formData.password) {
+        setMessage('Sign in successful! Redirecting to product page...');
+        setLoggedIn(true); // Set logged in to true
+        localStorage.setItem('currentUser', formData.email); // Save the logged-in user
+
+        // Redirect to the product page after 1 second
+        setTimeout(() => {
+          navigate('/products');
+        }, 1000);
+      } else {
+        setMessage('Incorrect password. Please try again.');
+      }
     } else {
-      setMessage('Invalid email or password. Please try again.');
+      setMessage('User not found. Please sign up.');
     }
   };
 
@@ -40,7 +45,7 @@ const SignIn = () => {
           <label htmlFor="email">Email</label>
           <input
             type="email"
-            id="email" // id should match the 'for' attribute of the label
+            id="email"
             name="email"
             placeholder="Email"
             required
@@ -53,7 +58,7 @@ const SignIn = () => {
           <label htmlFor="password">Password</label>
           <input
             type="password"
-            id="password" // id should match the 'for' attribute of the label
+            id="password"
             name="password"
             placeholder="Password"
             required
@@ -64,7 +69,6 @@ const SignIn = () => {
         </div>
         <button type="submit">Sign In</button>
       </form>
-      {/* Display success or error message */}
       <p>{message}</p>
     </div>
   );

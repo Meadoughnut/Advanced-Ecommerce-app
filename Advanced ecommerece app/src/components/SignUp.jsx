@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const SignUp = () => {
   const [user, setUser] = useState({ name: '', email: '', password: '' });
   const [message, setMessage] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  // Handle input changes and update the user state
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  // Handle sign-up form submission
   const handleSignUp = (e) => {
     e.preventDefault();
+
     const existingUser = localStorage.getItem(user.email);
 
-    // Check if the user already exists
     if (existingUser) {
       setMessage('User already exists. Please sign in.');
     } else {
-      // Save new user data to localStorage
+      // Store the user in localStorage
       localStorage.setItem(user.email, JSON.stringify(user));
-      setMessage('Sign up successful! Please sign in.');
+      setMessage('Sign up successful! Redirecting to the product page...');
+
+      // Redirect to the product page after 1 second
+      setTimeout(() => {
+        navigate('/products');
+      }, 1000); // 1 second delay to show the success message
     }
   };
 
@@ -54,7 +59,6 @@ const SignUp = () => {
         />
         <button type="submit">Sign Up</button>
       </form>
-      {/* Display success or error message */}
       <p>{message}</p>
     </div>
   );
