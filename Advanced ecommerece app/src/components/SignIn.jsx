@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = ({ setLoggedIn }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
+  // Handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Get the user data from localStorage
     const storedUser = localStorage.getItem(formData.email);
+
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
-      
+
       // Check if the password matches
       if (parsedUser.password === formData.password) {
         setMessage('Sign in successful! Redirecting to product page...');
         setLoggedIn(true); // Set logged in to true
         localStorage.setItem('currentUser', formData.email); // Save the logged-in user
 
-        // Redirect to the product page after 1 second
+        // Redirect to the product page after a short delay
         setTimeout(() => {
           navigate('/products');
-        }, 1000);
+        }, 1000); // 1-second delay to display success message
       } else {
         setMessage('Incorrect password. Please try again.');
       }
