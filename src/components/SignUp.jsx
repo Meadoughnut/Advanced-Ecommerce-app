@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// import logo from "../assets/logos/logo.png";
+import NavBar from './Navbar';
+import '../styles/signup.css'
 
 const SignUp = () => {
   const [user, setUser] = useState({ name: '', email: '', password: '' });
@@ -33,6 +36,7 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
+      <NavBar />
       <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <input

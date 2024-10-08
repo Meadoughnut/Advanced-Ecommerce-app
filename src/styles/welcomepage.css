@@ -1,102 +1,74 @@
-/* Welcome Page Container Styling */
+/* Mobile-First: Default Styling */
+
+/* Welcome Page Container */
 .welcome-page {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align content towards the bottom of the container */
+    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding-bottom: 40px; /* Adjusted for better positioning under the logo */
-    background: linear-gradient(to right, #a6a6a6, white);
-}
-
-/* Background Video Styling */
-.welcome-page video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Position video behind the content */
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    text-align: center;
+    padding: 20px;
+    background-image: url('../assets/Images/men.png'), url('../assets/Images/girl.png');
+    background-size: 100% 50%; /* Stack images vertically by default */
+    background-position: top, bottom;
+    background-repeat: no-repeat;
 }
 
 /* Welcome Content Styling */
 .welcome-page h1,
 .welcome-page p,
 .welcome-links {
-    
-    z-index: 2; /* Ensure content appears above the video */
-    color: black; /* Make all fonts black */
-    text-align: center;
-    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+    z-index: 2; /* Ensure content appears above the background */
+    color: black; /* Text color for visibility */
+    animation: fadeIn 2s ease-in-out;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Main Heading Styling */
+/* Heading Styling */
 .welcome-page h1 {
-    font-size: 2.5em;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', serif; /* Consider using a luxury font like Playfair Display */
+    margin-bottom: 20px;
 }
 
 /* Paragraph Text Styling */
 .welcome-page p {
-    
-    font-size: 1.2em;
-    max-width: 800px;
+    font-size: 1rem;
+    max-width: 90%;
     line-height: 1.6;
-    /* margin-bottom: 900px; */
-    /* margin-bottom: 20px; */
+    margin-bottom: 40px;
     font-family: 'Georgia', serif;
 }
 
-/* Links Container Styling */
+/* Links and Button Container */
 .welcome-links {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Ensure buttons are centered and aligned */
-    gap: 30px;
-    margin-top: 20px;
 }
 
-/* Sign Up and Sign In Links Styling */
+/* Links Styling */
 .welcome-links a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding-bottom: 5px;
-    position: relative;
-    font-family: 'Playfair Display', serif;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.welcome-links a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: black;
-    transition: width 0.5s ease-in-out;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .welcome-links a:hover {
-    color: #555; /* Softer color on hover */
-    transform: translateY(-3px); /* Subtle lift on hover */
-}
-
-.welcome-links a:hover::after {
-    width: 100%; /* Expand underline on hover */
+    background-color: black;
+    color: white; /* Invert colors on hover */
 }
 
 /* Guest Button Styling */
@@ -108,35 +80,36 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
-    transition: all 0.4s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .welcome-links button:hover {
     background-color: black;
-    color: white; /* Invert colors on hover for a striking effect */
-    border: 2px solid #333;
+    color: white; /* Invert colors on hover */
 }
 
-/* Responsive Styling for Smaller Devices */
-@media (max-width: 768px) {
+/* Larger Screen Enhancements */
+@media (min-width: 768px) {
+    /* Adjust background images to appear side by side */
+    .welcome-page {
+        background-size: 50% 100%; /* Each image takes 50% of the width */
+        background-position: left, right; /* Men on the left, women on the right */
+    }
+
+    /* Heading Styling */
     .welcome-page h1 {
-        font-size: 2.2em;
+        font-size: 2rem;
     }
 
+    /* Paragraph Text Styling */
     .welcome-page p {
-        font-size: 1em;
-        max-width: 90%;
+        font-size: 1.2rem;
+        max-width: 800px;
     }
 
+    /* Links and Button Container */
     .welcome-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .welcome-links a,
-    .welcome-links button {
-        width: 80%;
-        text-align: center;
+        flex-direction: row;
+        gap: 20px;
     }
 }
