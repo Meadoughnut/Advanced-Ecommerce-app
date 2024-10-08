@@ -1,0 +1,80 @@
+/* Mobile-First Styling */
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blurry effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+/* Navbar Logo */
+.navbar img {
+    width: 80px; /* Smaller size for mobile */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2); /* Same transparent background */
+    backdrop-filter: blur(10px); /* Blurry effect for the logo background */
+    border-radius: 10px; /* Optional: rounded corners to make it look elegant */
+    padding: 5px; /* Space around the logo */
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar List Items */
+.navbar ul li {
+    display: block;
+}
+
+/* Link Styling */
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white; /* Invert colors on hover */
+}
+
+/* Larger Screen Enhancements */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 15px 40px; /* Increase padding for larger screens */
+        background-color: rgba(255, 255, 255, 0.4); /* Slightly less transparent on larger screens */
+        backdrop-filter: blur(15px); /* Stronger blur effect on larger screens */
+    }
+
+    .navbar img {
+        width: 110px; /* Larger logo for desktop */
+        background-color: rgba(255, 255, 255, 0.4); /* Same transparent background for larger screens */
+        backdrop-filter: blur(15px); /* Stronger blur for the logo */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Arrange links horizontally */
+        gap: 20px;
+    }
+
+    .navbar ul li a {
+        padding: 10px 15px; /* Increase padding for larger screens */
+    }
+}

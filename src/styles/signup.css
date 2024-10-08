@@ -1,0 +1,96 @@
+/* Style for the sign-up page */
+
+/* Container for the entire signup page */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Background logo section */
+  .signup-logo {
+    width: 100%;
+    height: 200px;
+    background-image: url('../assets/logos/logo.png'); /* Use the logo as a background image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Form container */
+  .signup-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: -50px; /* Slight overlap with the logo */
+    text-align: center;
+  }
+  
+  /* Form title */
+  .signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  .signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input field hover and focus effects */
+  .signup-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .signup-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Message styling */
+  .signup-form p {
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  /* Mobile first styling */
+  @media (max-width: 768px) {
+    .signup-container {
+      padding: 10px;
+    }
+  
+    .signup-form {
+      padding: 20px;
+    }
+  }
+  

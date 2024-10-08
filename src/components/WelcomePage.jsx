@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import sampleVideo from "../assets/logos/sampleVideo.mp4";
+import NavBar from './Navbar';
+
+
 import '../styles/welcomepage.css';
 
 const WelcomePage = ({ setLoggedIn, setIsGuest }) => {
@@ -15,18 +17,12 @@ const WelcomePage = ({ setLoggedIn, setIsGuest }) => {
   return (
     <div className="welcome-page">
       {/* Video Player */}
-      <video 
-  width="740" 
-  height="460" 
-  autoPlay 
-  loop 
-  muted 
-  playsInline
-  style={{ pointerEvents: 'none', objectFit: 'cover', width: '100%', height: 'auto' }}
->
-  <source src={sampleVideo} type="video/mp4" />
+    <NavBar />
+      
+    {/* <img src={men} alt="a picture of model" width='110px' height='70px' /> */}
+    {/* <img src={women} alt="a picture of model" width='110px' height='70px' /> */}
  
-</video>
+
 
 
 
