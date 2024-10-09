@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import NavBar from './Navbar';
+// import NavBar from './Navbar';
+import women from '../assets/Images/womens/girl.png'
 
 
 import '../styles/welcomepage.css';
@@ -17,7 +18,7 @@ const WelcomePage = ({ setLoggedIn, setIsGuest }) => {
   return (
     <div className="welcome-page">
       {/* Video Player */}
-    <NavBar />
+    {/* <NavBar /> */}
       
     {/* <img src={men} alt="a picture of model" width='110px' height='70px' /> */}
     {/* <img src={women} alt="a picture of model" width='110px' height='70px' /> */}
