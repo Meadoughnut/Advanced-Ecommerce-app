@@ -1,82 +1,75 @@
-/* Mobile-First Styling */
-
 /* Navbar Container */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and links */
     align-items: center;
-    padding: 8px 16px;
-    background-color: rgba(0, 0, 0, 0.5); /* Darker transparent background */
-    backdrop-filter: blur(8px); /* Subtle blurry effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for a lifted effect */
-    position: relative;
-    z-index: 10;
+    background-color: #fbfbfb; /* Dark background for elegance */
+    padding: 15px 30px;
+    position: fixed; /* Fixes the navbar at the top */
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-/* Navbar Logo */
+/* Logo Styling */
 .navbar img {
-    width: 70px; /* Slightly smaller for mobile */
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent background */
-    backdrop-filter: blur(8px); /* Subtle blur for the logo background */
-    border-radius: 8px; /* Softer corners */
-    padding: 6px; /* Slightly more padding around the logo */
+    display: block;
+    max-width: 110px;
+    height: auto; /* Responsive logo */
 }
 
 /* Navbar Links */
 .navbar ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    flex-direction: column; /* Vertical links on mobile */
-    gap: 12px;
     margin: 0;
     padding: 0;
-    text-align: right; /* Align links to the right */
+    gap: 30px; /* Space between links */
 }
 
-/* Navbar List Items */
+/* Links Styling */
 .navbar ul li {
-    display: block;
+    display: inline;
 }
 
-/* Link Styling */
 .navbar ul li a {
     text-decoration: none;
-    color: white; /* Lighter text color for contrast */
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif; /* More modern font */
-    padding: 6px 12px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+    color: black; /* White text for contrast */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
+/* Hover Effects */
 .navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Brighten the background on hover */
-    color: black; /* Invert text color */
+    background-color: #b49a67; /* Elegant gold on hover */
+    color: white; /* Keep text white on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Larger Screen Enhancements */
-@media (min-width: 768px) {
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
     .navbar {
-        padding: 12px 32px; /* Increase padding for larger screens */
-        background-color: rgba(0, 0, 0, 0.6); /* Darker background for larger screens */
-        backdrop-filter: blur(10px); /* Increase blur effect */
-    }
-
-    .navbar img {
-        width: 100px; /* Slightly larger logo for desktop */
-        background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
-        backdrop-filter: blur(10px); /* Match the blur strength */
+        flex-direction: column;
+        padding: 10px;
     }
 
     .navbar ul {
-        flex-direction: row; /* Horizontal layout for links */
-        gap: 24px; /* More space between links */
+        flex-direction: column;
+        gap: 20px;
     }
 
     .navbar ul li a {
-        padding: 10px 18px; /* Increase padding for larger screens */
+        padding: 10px 20px; /* Larger hit area for mobile */
     }
+}
+
+/* Sticky Navbar Effect */
+.sticky {
+    background-color: #34495e;
+    transition: 0.4s ease;
 }
