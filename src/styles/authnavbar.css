@@ -1,0 +1,59 @@
+/* AuthNavbar container */
+.authnavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    height: 60px;
+  }
+  
+  /* Left section (Sign In, Sign Up, Continue as Guest) */
+  .authnavbar-left {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .authnavbar-left a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .authnavbar-left a:hover {
+    color: #555;
+  }
+  
+  /* Center section (Meadin Fashion) */
+  .authnavbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .authnavbar-center p {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif; /* Luxurious font */
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .authnavbar {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .authnavbar-left {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .authnavbar-center {
+      margin-bottom: 10px;
+    }
+  }
+  

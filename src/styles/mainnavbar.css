@@ -1,0 +1,76 @@
+/* MainNavbar container */
+.mainnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+/* Left section (Men, Women, Kaba) */
+.mainnavbar-left {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.mainnavbar-left a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.mainnavbar-left a:hover {
+  color: #555;
+}
+
+/* Center section (Meadin Fashion) */
+.mainnavbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mainnavbar-center p {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif; /* Luxurious font */
+  color: #333;
+  margin: 0;
+}
+
+/* Right section (Home, Cart) */
+.mainnavbar-right {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.mainnavbar-right a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.mainnavbar-right a:hover {
+  color: #555;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .mainnavbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mainnavbar-left,
+  .mainnavbar-right {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .mainnavbar-center {
+    margin-bottom: 10px;
+  }
+}

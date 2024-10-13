@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavBar from './Navbar';
-import '../styles/signin.css'
+import '../styles/signin.css'; // Import custom styles
+import AuthNavbar from './AuthNavbar'; // Import AuthNavbar
 
 const SignIn = ({ setLoggedIn }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -26,13 +26,13 @@ const SignIn = ({ setLoggedIn }) => {
 
       // Check if the password matches
       if (parsedUser.password === formData.password) {
-        setMessage('Sign in successful! Redirecting to product page...');
+        setMessage('Sign in successful! Redirecting to homepage...');
         setLoggedIn(true); // Set logged in to true
         localStorage.setItem('currentUser', formData.email); // Save the logged-in user
 
-        // Redirect to the product page after a short delay
+        // Redirect to the home page after a short delay
         setTimeout(() => {
-          navigate('/products');
+          navigate('/home'); // Ensure this matches your route definition
         }, 1000); // 1-second delay to display success message
       } else {
         setMessage('Incorrect password. Please try again.');
@@ -44,7 +44,9 @@ const SignIn = ({ setLoggedIn }) => {
 
   return (
     <div className="signin-container">
-       <NavBar />
+      {/* Render the AuthNavbar */}
+      <AuthNavbar />
+
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <div>

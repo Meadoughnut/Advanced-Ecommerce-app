@@ -1,7 +1,9 @@
+// import React from 'react';
 import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 // import logo from "../assets/logos/logo.png";
-import NavBar from './Navbar';
+import AuthNavbar from './AuthNavbar'; // Import AuthNavbar
 import '../styles/signup.css'
 
 const SignUp = () => {
@@ -29,14 +31,14 @@ const SignUp = () => {
 
       // Redirect to the product page after a short delay
       setTimeout(() => {
-        navigate('/products');
+        navigate('/Home');
       }, 1000);
     }
   };
 
   return (
     <div className="signup-container">
-      <NavBar />
+       <AuthNavbar />
       <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <input

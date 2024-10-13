@@ -1,0 +1,353 @@
+[
+    {
+      "id": 1,
+      "name": "Ethiopian Traditional Dress",
+      "price": 89.99,
+      "image": "TraditionalDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 2,
+      "name": "Embroidered Cotton Dress",
+      "price": 99.99,
+      "image": "CottonDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 3,
+      "name": "Silk Habesha Kemis",
+      "price": 119.99,
+      "image": "SilkKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 4,
+      "name": "White Linen Gabi Dress",
+      "price": 79.99,
+      "image": "LinenGabi1.png",
+      "category": "Women"
+    },
+    {
+      "id": 5,
+      "name": "Traditional Handwoven Kemis",
+      "price": 109.99,
+      "image": "HandwovenKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 6,
+      "name": "Yellow Habesha Dress",
+      "price": 84.99,
+      "image": "YellowDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 7,
+      "name": "Black Embroidered Kemis",
+      "price": 129.99,
+      "image": "BlackEmbroidered1.png",
+      "category": "Women"
+    },
+    {
+      "id": 8,
+      "name": "Floral Print Habesha Dress",
+      "price": 69.99,
+      "image": "FloralPrint1.png",
+      "category": "Women"
+    },
+    {
+      "id": 9,
+      "name": "Traditional Zuriya Dress",
+      "price": 139.99,
+      "image": "ZuriyaDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 10,
+      "name": "Royal Blue Habesha Dress",
+      "price": 89.99,
+      "image": "RoyalBlue1.png",
+      "category": "Women"
+    },
+    {
+      "id": 11,
+      "name": "Elegant Habesha Dress",
+      "price": 99.99,
+      "image": "ElegantDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 12,
+      "name": "Modern Kemis",
+      "price": 89.99,
+      "image": "ModernKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 13,
+      "name": "Traditional Ethiopian Dress",
+      "price": 109.99,
+      "image": "TraditionalDress2.png",
+      "category": "Women"
+    },
+    {
+      "id": 14,
+      "name": "Gold Embroidered Dress",
+      "price": 139.99,
+      "image": "GoldEmbroidered1.png",
+      "category": "Women"
+    },
+    {
+      "id": 15,
+      "name": "Classic Habesha Dress",
+      "price": 89.99,
+      "image": "ClassicDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 16,
+      "name": "White Habesha Dress",
+      "price": 69.99,
+      "image": "WhiteDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 17,
+      "name": "Handwoven Gabi Dress",
+      "price": 119.99,
+      "image": "HandwovenGabi1.png",
+      "category": "Women"
+    },
+    {
+      "id": 18,
+      "name": "Premium Silk Dress",
+      "price": 149.99,
+      "image": "PremiumSilk1.png",
+      "category": "Women"
+    },
+    {
+      "id": 19,
+      "name": "Vibrant Habesha Dress",
+      "price": 79.99,
+      "image": "VibrantDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 20,
+      "name": "Red Embroidered Dress",
+      "price": 119.99,
+      "image": "RedEmbroidered1.png",
+      "category": "Women"
+    },
+    {
+      "id": 21,
+      "name": "Cultural Habesha Kemis",
+      "price": 129.99,
+      "image": "CulturalKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 22,
+      "name": "Modern Habesha Dress",
+      "price": 79.99,
+      "image": "ModernDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 23,
+      "name": "Ethiopian Celebration Dress",
+      "price": 139.99,
+      "image": "CelebrationDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 24,
+      "name": "Cream Linen Dress",
+      "price": 99.99,
+      "image": "CreamLinen1.png",
+      "category": "Women"
+    },
+    {
+      "id": 25,
+      "name": "Black Habesha Dress",
+      "price": 89.99,
+      "image": "BlackDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 26,
+      "name": "Blue Habesha Dress",
+      "price": 69.99,
+      "image": "BlueDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 27,
+      "name": "Yellow Silk Dress",
+      "price": 149.99,
+      "image": "YellowSilk1.png",
+      "category": "Women"
+    },
+    {
+      "id": 28,
+      "name": "Silver Embroidered Dress",
+      "price": 119.99,
+      "image": "SilverEmbroidered1.png",
+      "category": "Women"
+    },
+    {
+      "id": 29,
+      "name": "Green Habesha Dress",
+      "price": 99.99,
+      "image": "GreenDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 30,
+      "name": "Purple Traditional Dress",
+      "price": 109.99,
+      "image": "PurpleDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 31,
+      "name": "Pink Silk Dress",
+      "price": 129.99,
+      "image": "PinkSilk1.png",
+      "category": "Women"
+    },
+    {
+      "id": 32,
+      "name": "Handcrafted Kemis",
+      "price": 149.99,
+      "image": "HandcraftedKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 33,
+      "name": "Silver Lined Dress",
+      "price": 139.99,
+      "image": "SilverLinedDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 34,
+      "name": "Traditional Embroidered Dress",
+      "price": 119.99,
+      "image": "EmbroideredDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 35,
+      "name": "White Silk Habesha Dress",
+      "price": 139.99,
+      "image": "WhiteSilk1.png",
+      "category": "Women"
+    },
+    {
+      "id": 36,
+      "name": "Gold Lined Dress",
+      "price": 149.99,
+      "image": "GoldLinedDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 37,
+      "name": "Ethiopian Wedding Dress",
+      "price": 199.99,
+      "image": "WeddingDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 38,
+      "name": "Ethiopian Evening Gown",
+      "price": 169.99,
+      "image": "EveningGown1.png",
+      "category": "Women"
+    },
+    {
+      "id": 39,
+      "name": "Handwoven Silk Dress",
+      "price": 149.99,
+      "image": "HandwovenSilk1.png",
+      "category": "Women"
+    },
+    {
+      "id": 40,
+      "name": "Ivory Habesha Dress",
+      "price": 99.99,
+      "image": "IvoryDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 41,
+      "name": "Red Silk Traditional Dress",
+      "price": 139.99,
+      "image": "RedSilkDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 42,
+      "name": "Blue Embroidered Dress",
+      "price": 119.99,
+      "image": "BlueEmbroideredDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 43,
+      "name": "Classic Habesha Kemis",
+      "price": 89.99,
+      "image": "ClassicKemis1.png",
+      "category": "Women"
+    },
+    {
+      "id": 44,
+      "name": "Royal Gold Dress",
+      "price": 169.99,
+      "image": "RoyalGoldDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 45,
+      "name": "Velvet Habesha Dress",
+      "price": 179.99,
+      "image": "VelvetDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 46,
+      "name": "Black Silk Dress",
+      "price": 159.99,
+      "image": "BlackSilkDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 47,
+      "name": "Traditional White Dress",
+      "price": 79.99,
+      "image": "WhiteDress2.png",
+      "category": "Women"
+    },
+    {
+      "id": 48,
+      "name": "Cultural Silk Dress",
+      "price": 179.99,
+      "image": "CulturalSilkDress1.png",
+      "category": "Women"
+    },
+    {
+      "id": 49,
+      "name": "Handwoven Traditional Dress",
+      "price": 129.99,
+      "image": "HandwovenDress2.png",
+      "category": "Women"
+    },
+    {
+      "id": 50,
+      "name": "Golden Thread Dress",
+      "price": 199.99,
+      "image": "GoldenThreadDress1.png",
+      "category": "Women"
+    }
+  ]
+  
