@@ -3,9 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f7f7;
+  background-color: #000; /* Black background */
   padding: 10px 20px;
   height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Left section (Men, Women, Kaba) */
@@ -16,13 +20,13 @@
 
 .mainnavbar-left a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* White text */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .mainnavbar-left a:hover {
-  color: #555;
+  color: #ccc; /* Slightly lighter on hover */
 }
 
 /* Center section (Meadin Fashion) */
@@ -36,7 +40,7 @@
   font-size: 1.5em;
   font-weight: bold;
   font-family: 'Playfair Display', serif; /* Luxurious font */
-  color: #333;
+  color: #fff; /* White text */
   margin: 0;
 }
 
@@ -48,13 +52,13 @@
 
 .mainnavbar-right a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* White text */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .mainnavbar-right a:hover {
-  color: #555;
+  color: #ccc; /* Slightly lighter on hover */
 }
 
 /* Responsive styling */
@@ -62,6 +66,7 @@
   .mainnavbar {
     flex-direction: column;
     height: auto;
+    padding: 20px 10px; /* Adjust padding for mobile */
   }
 
   .mainnavbar-left,
