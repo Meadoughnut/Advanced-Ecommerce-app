@@ -1,0 +1,117 @@
+/* Cart Container */
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px; /* Padding to prevent overlap with the navbar */
+    background-color: #000; /* Black background */
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Cart Title Styling */
+  .cart h1 {
+    font-size: 2.5rem;
+    color: #fff; /* White text */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+  }
+  
+  /* Cart Item Container */
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Cart Item Name and Price Styling */
+  .cart-item h2 {
+    font-size: 1.8rem;
+    color: #fff; /* White text */
+    margin-bottom: 10px;
+  }
+  
+  .cart-item p {
+    font-size: 1.2rem;
+    color: #fff; /* White text */
+    margin-bottom: 10px;
+  }
+  
+  /* Quantity Buttons Styling */
+  .cart-item button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: #000; /* Black background for the button */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .cart-item button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+  }
+  
+  /* Total Price Styling */
+  .cart p strong {
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+    margin-top: 20px;
+  }
+  
+  /* Proceed to Checkout Button Styling */
+  .proceed-checkout {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #000; /* Black background for the button */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  /* Hover Effect for Proceed to Checkout Button */
+  .proceed-checkout:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .cart h1 {
+      font-size: 2rem;
+    }
+  
+    .cart-item h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cart-item p {
+      font-size: 1rem;
+    }
+  
+    .proceed-checkout {
+      font-size: 1rem;
+    }
+  }
+  

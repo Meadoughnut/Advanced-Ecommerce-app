@@ -1,74 +1,102 @@
-/* Homepage Container */
+/* Mobile-First Homepage Container */
 .homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120vh;
-  background-color: #f7f7f7;
+  height: 200vh;
+  background-color: #000; /* Black background */
   text-align: center;
   padding: 20px;
 }
 
 /* Homepage Title Styling */
 .homepage-title {
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-family: 'Playfair Display', serif;
-  color: #333;
-  margin-bottom: 40px;
+  color: #fff; /* White text */
+  margin-bottom: 20px;
 }
 
-/* Fashion Choices Section */
+/* Fashion Choices Section for Mobile */
 .homepage-choices {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 20px;
+  flex-direction: column;
   width: 100%;
+  gap: 20px;
 }
 
-/* Individual Fashion Choice Sections with Full-Page Backgrounds */
-.men-choice,
-.women-choice {
-  width: 50%; /* Split the screen between men and women */
-  height: 100vh; /* Full-page height */
-  background-size: cover; /* Ensure the image covers the full area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling of the image */
+/* Fashion Choice Section */
+.fashion-choice {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjusted height for mobile */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
   color: white;
-  font-size: 2em;
-  transition: background-color 0.3s ease;
+  font-size: 1.8em;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent overlay */
 }
 
 /* Men's Section Background */
 .men-choice {
-  background-image: url('../assets/Images/mens/greenman.png'); /* Full-page background image for men */
-  background-color: rgba(74, 144, 226, 0.5); /* Overlay color for men */
+  background-image: url('../assets/Images/mens/greenman.png');
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for black theme */
 }
 
 /* Women's Section Background */
 .women-choice {
-  background-image: url('../assets/Images/womens/greenwoman.png'); /* Full-page background image for women */
-  background-color: rgba(233, 78, 119, 0.5); /* Overlay color for women */
+  background-image: url('../assets/Images/womens/greenwoman.png');
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for black theme */
 }
 
 /* Hover Effects for Fashion Choices */
 .men-choice:hover,
 .women-choice:hover {
-  opacity: 0.9;
-  transform: scale(1.02); /* Slight zoom on hover */
+  opacity: 0.85;
+  transform: scale(1.05); /* Slight zoom for a sophisticated feel */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter overlay on hover */
+  color: #fff; /* Keep text white */
 }
 
-@media (max-width: 768px) {
-  /* Stack sections on smaller screens */
-  .men-choice, .women-choice {
-    width: 100%;
-    height: 50vh; /* Adjust height for smaller screens */
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .homepage {
+    padding: 40px;
+  }
+
+  /* Adjust title for larger screens */
+  .homepage-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+
+  /* Flex Fashion Choices for Desktop */
+  .homepage-choices {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    width:100%
+  }
+
+  /* Fashion Choice Section for Desktop */
+  .fashion-choice {
+    width: 45%;
+    height: 100vh;
   }
 }
 
+/* Sophisticated Black & White Hover Effects */
+.men-choice:hover,
+.women-choice:hover {
+  opacity: 0.85;
+  background-color: rgba(255, 255, 255, 0.2); /* Lighter overlay on hover */
+  color: #fff; /* Keep text white */
+}

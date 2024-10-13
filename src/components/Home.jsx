@@ -13,6 +13,7 @@ const HomePage = () => {
 
       {/* Men and Women Fashion Section */}
       <div className="homepage-choices">
+     
         <Link to="/men" className="fashion-choice men-choice">
           Men’s Fashion
         </Link>

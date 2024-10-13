@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import '../styles/cart.css';
+
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]); // State to store cart items
@@ -46,7 +48,45 @@ const Cart = () => {
   // If the cart is empty, display a message
   if (cartItems.length === 0) {
     console.log('Cart is empty');
-    return <div>Your cart is empty!</div>;
+    return (
+      <div style={{ 
+        color: '#fff', /* White text */
+        backgroundColor: '#000', /* Black background */
+        padding: '20px',
+        textAlign: 'center',
+        borderRadius: '10px',
+        fontFamily: "'Playfair Display', serif", /* Luxurious font */
+        fontSize: '1.5rem'
+      }}>
+        Your cart is empty!
+        {/* Go Back Button */}
+        <button 
+          onClick={() => navigate(-1)} 
+          style={{
+            marginTop: '20px',
+            padding: '10px 20px',
+            color: '#fff', /* White text */
+            backgroundColor: '#000', /* Black background */
+            border: '2px solid #fff', /* White border */
+            borderRadius: '5px',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease, color 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = '#fff';
+            e.target.style.color = '#000';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = '#000';
+            e.target.style.color = '#fff';
+          }}
+        >
+          Go Back
+        </button>
+      </div>
+    );
+    
   }
 
   // Calculate the total price of all items in the cart

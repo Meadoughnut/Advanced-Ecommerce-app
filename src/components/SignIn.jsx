@@ -50,7 +50,7 @@ const SignIn = ({ setLoggedIn }) => {
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email</label>
+         
           <input
             type="email"
             id="email"
@@ -63,7 +63,7 @@ const SignIn = ({ setLoggedIn }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+         
           <input
             type="password"
             id="password"
