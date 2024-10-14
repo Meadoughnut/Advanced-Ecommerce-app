@@ -10,343 +10,133 @@
     "id": 2,
     "name": "Embroidered Jubbah",
     "price": 109.99,
-    "image": "EmbroideredJubbah1.png",
+    "image": "M_image2.png",
     "category": "Men"
   },
   {
     "id": 3,
     "name": "Handwoven Gabi Coat",
     "price": 149.99,
-    "image": "GabiCoat1.png",
+    "image": "M_image3.png",
     "category": "Men"
   },
   {
     "id": 4,
     "name": "Cotton Shamma Outfit",
     "price": 89.99,
-    "image": "ShammaOutfit1.png",
+    "image": "M_image4.png",
     "category": "Men"
   },
   {
     "id": 5,
     "name": "White Linen Suit",
     "price": 119.99,
-    "image": "LinenSuit1.png",
+    "image": "M_image5.png",
     "category": "Men"
   },
   {
     "id": 6,
     "name": "Black Habesha Suit",
     "price": 139.99,
-    "image": "BlackSuit1.png",
+    "image": "M_image6.png",
     "category": "Men"
   },
   {
     "id": 7,
     "name": "Grey Traditional Suit",
     "price": 109.99,
-    "image": "GreySuit1.png",
+    "image": "M_image7.png",
     "category": "Men"
   },
   {
     "id": 8,
     "name": "Royal Blue Shamma",
     "price": 99.99,
-    "image": "RoyalBlueShamma1.png",
+    "image": "M_image8.png",
     "category": "Men"
   },
   {
     "id": 9,
     "name": "Golden Embroidered Suit",
     "price": 149.99,
-    "image": "GoldenSuit1.png",
+    "image": "M_image9.png",
     "category": "Men"
   },
   {
     "id": 10,
     "name": "Beige Traditional Shamma",
     "price": 79.99,
-    "image": "BeigeShamma1.png",
+    "image": "M_image10.png",
     "category": "Men"
   },
   {
     "id": 11,
     "name": "Traditional Ethiopian Outfit",
     "price": 119.99,
-    "image": "TraditionalOutfit1.png",
+    "image": "M_image11.png",
     "category": "Men"
   },
   {
     "id": 12,
     "name": "Formal Ethiopian Suit",
     "price": 129.99,
-    "image": "FormalSuit1.png",
+    "image": "M_image12.png",
     "category": "Men"
   },
   {
     "id": 13,
     "name": "Traditional White Jubbah",
     "price": 99.99,
-    "image": "WhiteJubbah1.png",
+    "image": "M_image13.png",
     "category": "Men"
   },
   {
     "id": 14,
     "name": "Traditional Gold Embroidered Jubbah",
     "price": 139.99,
-    "image": "GoldEmbroideredJubbah1.png",
+    "image": "M_image14.png",
     "category": "Men"
   },
   {
     "id": 15,
     "name": "Embroidered Traditional Suit",
     "price": 109.99,
-    "image": "EmbroideredSuit1.png",
+    "image": "M_image15.png",
     "category": "Men"
   },
   {
     "id": 16,
     "name": "Modern Habesha Suit",
     "price": 129.99,
-    "image": "ModernSuit1.png",
+    "image": "M_image16.png",
     "category": "Men"
   },
   {
     "id": 17,
     "name": "Grey Embroidered Suit",
     "price": 139.99,
-    "image": "GreyEmbroideredSuit1.png",
+    "image": "M_image17.png",
     "category": "Men"
   },
   {
     "id": 18,
     "name": "Formal White Linen Suit",
     "price": 149.99,
-    "image": "WhiteLinenSuit1.png",
+    "image": "M_image18.png",
     "category": "Men"
   },
   {
     "id": 19,
     "name": "Traditional Cotton Shamma",
     "price": 99.99,
-    "image": "CottonShamma1.png",
+    "image": "M_image19.png",
     "category": "Men"
   },
   {
     "id": 20,
     "name": "Black Embroidered Shamma",
     "price": 119.99,
-    "image": "BlackEmbroideredShamma1.png",
-    "category": "Men"
-  },
-  {
-    "id": 21,
-    "name": "Green Traditional Suit",
-    "price": 89.99,
-    "image": "GreenSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 22,
-    "name": "Royal Ethiopian Suit",
-    "price": 149.99,
-    "image": "RoyalSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 23,
-    "name": "Embroidered Cotton Outfit",
-    "price": 109.99,
-    "image": "EmbroideredCotton1.png",
-    "category": "Men"
-  },
-  {
-    "id": 24,
-    "name": "White Traditional Suit",
-    "price": 99.99,
-    "image": "WhiteSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 25,
-    "name": "Beige Embroidered Jubbah",
-    "price": 119.99,
-    "image": "BeigeEmbroideredJubbah1.png",
-    "category": "Men"
-  },
-  {
-    "id": 26,
-    "name": "Cultural Habesha Suit",
-    "price": 129.99,
-    "image": "CulturalSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 27,
-    "name": "Traditional Wedding Suit",
-    "price": 149.99,
-    "image": "WeddingSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 28,
-    "name": "Golden Traditional Suit",
-    "price": 169.99,
-    "image": "GoldenSuit2.png",
-    "category": "Men"
-  },
-  {
-    "id": 29,
-    "name": "Ivory Traditional Outfit",
-    "price": 139.99,
-    "image": "IvoryOutfit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 30,
-    "name": "Royal Blue Shamma Suit",
-    "price": 159.99,
-    "image": "RoyalBlueSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 31,
-    "name": "Silver Embroidered Shamma",
-    "price": 119.99,
-    "image": "SilverShamma1.png",
-    "category": "Men"
-  },
-  {
-    "id": 32,
-    "name": "Handwoven Cotton Suit",
-    "price": 149.99,
-    "image": "HandwovenSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 33,
-    "name": "Ethiopian Cultural Coat",
-    "price": 139.99,
-    "image": "CulturalCoat1.png",
-    "category": "Men"
-  },
-  {
-    "id": 34,
-    "name": "Beige Habesha Suit",
-    "price": 119.99,
-    "image": "BeigeSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 35,
-    "name": "Black Cultural Jubbah",
-    "price": 149.99,
-    "image": "BlackJubbah1.png",
-    "category": "Men"
-  },
-  {
-    "id": 36,
-    "name": "Embroidered White Suit",
-    "price": 129.99,
-    "image": "EmbroideredWhiteSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 37,
-    "name": "Blue Traditional Outfit",
-    "price": 159.99,
-    "image": "BlueOutfit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 38,
-    "name": "Golden Thread Suit",
-    "price": 179.99,
-    "image": "GoldenThreadSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 39,
-    "name": "Classic Habesha Suit",
-    "price": 139.99,
-    "image": "ClassicSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 40,
-    "name": "Handcrafted Ethiopian Suit",
-    "price": 149.99,
-    "image": "HandcraftedSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 41,
-    "name": "Golden Embroidered Jubbah",
-    "price": 159.99,
-    "image": "GoldenEmbroideredJubbah1.png",
-    "category": "Men"
-  },
-  {
-    "id": 42,
-    "name": "Modern Traditional Suit",
-    "price": 129.99,
-    "image": "ModernSuit2.png",
-    "category": "Men"
-  },
-  {
-    "id": 43,
-    "name": "Handwoven Gabi Outfit",
-    "price": 139.99,
-    "image": "HandwovenOutfit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 44,
-    "name": "Royal Red Suit",
-    "price": 179.99,
-    "image": "RoyalRedSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 45,
-    "name": "Traditional Blue Jubbah",
-    "price": 159.99,
-    "image": "BlueJubbah1.png",
-    "category": "Men"
-  },
-  {
-    "id": 46,
-    "name": "Black Linen Suit",
-    "price": 129.99,
-    "image": "BlackLinenSuit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 47,
-    "name": "White Traditional Outfit",
-    "price": 119.99,
-    "image": "WhiteOutfit1.png",
-    "category": "Men"
-  },
-  {
-    "id": 48,
-    "name": "Beige Embroidered Shamma",
-    "price": 149.99,
-    "image": "BeigeShamma1.png",
-    "category": "Men"
-  },
-  {
-    "id": 49,
-    "name": "Golden Traditional Shamma",
-    "price": 179.99,
-    "image": "GoldenShamma1.png",
-    "category": "Men"
-  },
-  {
-    "id": 50,
-    "name": "Velvet Habesha Suit",
-    "price": 189.99,
-    "image": "VelvetSuit1.png",
+    "image": "M_image20.png",
     "category": "Men"
   }
 ]
