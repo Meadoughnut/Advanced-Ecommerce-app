@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import productsData from '../mock-data/products.json';
+import productsData from '../mock-data/menProducts.json';
 import '../styles/productdetail.css';
 
 
@@ -67,7 +67,7 @@ const ProductDetails = () => {
        <button onClick={goBack} className="go-back-button">
         Go Back
       </button>
-      <img src={`/assets/images/${product.image}`} alt={product.name} className="product-image" />
+      <img src={`/assets/images/mensimage/${product.image}`} alt={product.name} className="product-image" />
       <h1>{product.name}</h1>
       <p>${product.price.toFixed(2)}</p>
       <p>{product.description}</p>
